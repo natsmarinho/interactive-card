@@ -1,1 +1,52 @@
 @import url("../css/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+    --branco: #fff;
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container-cards {
+    background: rgba(33, 9, 47, 1);
+    width: 100%;
+    height: 30vh;
+}
+
+.gradiente {
+    background: linear-gradient(323deg, rgba(255,131,74,1) 23%, rgba(71,162,255,1) 43%, rgba(213,58,255,1) 77%);
+    width: 100%;
+    height: 20vh;
+    filter: blur(110px);
+    opacity: 0.8474;
+}
+
+.frente {
+    position: relative;
+    background: linear-gradient(164deg, #6348FE 4.74%, #610595 88.83%);
+    width: 50%;
+    border-radius: 13px;
+    top: -1rem;
+    left: 2rem;
+    padding: 1rem;
+    color: var(--branco);
+}
+
+.gradiente-card {
+    background: linear-gradient(323deg, rgba(255,131,74,1) 32%, rgba(71,162,255,1) 59%, rgba(213,58,255,1) 100%);
+    filter: blur(40px);
+    opacity: 0.8474;
+}
+
+.numero-cartao {
+    padding-block: 2.31rem 1rem;
+}
+
+.info-client {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.08038rem;
+    text-transform: uppercase;
+    font-size: 0.5625rem;
+}
