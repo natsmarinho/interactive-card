@@ -33,6 +33,9 @@ body {
     padding: 1rem;
     color: var(--branco);
     z-index: 1;
+    -webkit-box-shadow: 6px 28px 53px 7px rgba(77,77,77,0.49);
+-moz-box-shadow: 6px 28px 53px 7px rgba(77,77,77,0.49);
+box-shadow: 6px 28px 53px 7px rgba(77,77,77,0.49)
 }
 
 .gradiente-card {
@@ -72,7 +75,7 @@ body {
     padding: 1rem;
 }
 
-.cvv-container {
+.cvc-container {
     background: rgb(176, 176, 176);
     text-align: end;
     width: 80%;
@@ -83,9 +86,76 @@ body {
     border-radius: 3px;
 }
 
-.cvv-number {
+.cvc-number {
     letter-spacing: 0.08038rem;
     font-size: 0.5625rem;
     color: var(--branco);
     padding-right: 1rem;
+}
+
+.form-user {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem 0 2rem;
+}
+
+.form-user label {
+    padding-bottom: .4rem;
+}
+
+.form-user input {
+    margin-bottom: 1rem;
+}
+
+#cardholder-name, #card-number {
+    padding: .5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--Light-Grey, #DFDEE0);
+}
+
+.exp-date-and-cvv {
+    display: flex;
+}
+
+.exp-date-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-data {
+    display: flex;
+    gap: .4rem;
+}
+
+#month, #year {
+    width: 25%;
+    border-radius: 0.5rem;
+    border: 1px solid var(--Light-Grey, #DFDEE0);
+    padding-block: .7rem;
+    padding-inline: .3rem;
+}
+
+#month::placeholder, #year::placeholder {
+    padding-left: .3rem;
+}
+
+.cvc-container-data {
+    display: flex;
+    flex-direction: column;
+}
+
+#cvc-data {
+    border-radius: 0.5rem;
+    border: 1px solid var(--Light-Grey, #DFDEE0);
+    padding-block: .7rem;
+}
+
+#btn-confirm {
+    border-radius: 0.5rem;
+    background: var(--Deep-Violet, #21092F);
+    color: var(--branco);
+    padding: 1rem;
+    margin-top: 1rem;
 }
