@@ -98,7 +98,12 @@ box-shadow: 6px 28px 53px 7px rgba(77,77,77,0.49)
     font-size: 0.75rem;
     display: flex;
     flex-direction: column;
-    padding: 5rem 2rem 0 2rem;
+    padding: 5rem 3rem 0 2rem;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .form-user label {
@@ -150,6 +155,18 @@ box-shadow: 6px 28px 53px 7px rgba(77,77,77,0.49)
     border-radius: 0.5rem;
     border: 1px solid var(--Light-Grey, #DFDEE0);
     padding-block: .7rem;
+}
+
+.container-success {
+    margin: auto;
+    text-align: center;
+}
+
+.container-success-title {
+    text-transform: uppercase;
+    letter-spacing: 0.21388rem;
+    font-size: 1.75rem;
+    padding-block: 2rem 1rem;
 }
 
 #btn-confirm {
