@@ -117,10 +117,26 @@ body {
     margin-bottom: 1rem;
 }
 
+#cardholder-name:focus, 
+#card-number:focus,
+#month:focus,
+#year:focus,
+#cvc-data:focus {
+    outline: none;
+    border: 1px solid #6348FE;
+}
+
 #cardholder-name, #card-number {
     padding: .5rem;
     border-radius: 0.5rem;
     border: 1px solid var(--Light-Grey, #DFDEE0);
+}
+
+.msg-error {
+    color: #FF5050;
+    text-transform: none;
+    margin-top: -.7rem;
+    margin-bottom: 1rem;
 }
 
 .exp-date-and-cvv {
