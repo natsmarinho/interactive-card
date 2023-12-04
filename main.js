@@ -1,7 +1,7 @@
 const userName = document.querySelector("#cardholder-name");
 const cardNumber = document.querySelector("#card-number");
 const dataUser = document.querySelectorAll(".client-data");
-const msgErrorSpan = document.querySelectorAll(".msg-error")
+const msgErrorSpan = document.querySelectorAll(".msg-error");
 
 function setError(i) {
     dataUser[i].style.border = "1px solid #FF5050";
@@ -24,5 +24,17 @@ function validateName() {
         msgError = '<span class="msg-error">Can’t be blank</span>';
         msgErrorSpan[0].innerHTML = msgError;
         setError(0);
+    }
+}
+
+function validateCardNumber () {
+    if(/^[0-9]+$/.test(cardNumber.value)){
+        removeError(1);
+        msgError = "";
+        msgErrorSpan[1].innerHTML = msgError;
+    } else {
+        msgError = '<span class="msg-error">Wrong format, numbers only</span>';
+        msgErrorSpan[1].innerHTML = msgError;
+        setError(1);
     }
 }

@@ -56,8 +56,8 @@
             <span class="msg-error"></span>
 
             <label for="card-number">Card number</label>
-            <input type="text" maxlength="12" id="card-number" placeholder="1234 5678 9123 0000" class="client-data">
-            <span class="msg-error">Wrong format, numbers only</span>
+            <input type="text" maxlength="12" id="card-number" placeholder="1234 5678 9123 0000" class="client-data" oninput="validateCardNumber()">
+            <span class="msg-error"></span>
         
         <div class="exp-date-and-cvv">
             <div class="exp-date-container">
