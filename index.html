@@ -63,17 +63,17 @@
             <div class="exp-date-container">
                 <label for="exp-date" class="date">Exp.date (MM/YY)</label>
                 <div class="inputs-data">
-                    <input type="number" id="month" placeholder="MM" class="client-data">
-                    <input type="number" id="year" placeholder="YY" class="client-data">
+                    <input type="number" maxlength="30" id="month" placeholder="MM" class="client-data" oninput="validateDate()">
+                    <input type="number" id="year" placeholder="YY" class="client-data" oninput="validateDate()">
                 </div>
 
-                <span class="msg-error">Can’t be blank</span>
+                <span class="msg-error"></span>
             
             </div>
             <div class="cvc-container-data">
                 <label for="cvc-data">Cvc</label>
-                <input type="number" id="cvc-data" placeholder="e.g 123" class="client-data">
-                <span class="msg-error">Can’t be blank</span>
+                <input type="text" id="cvc-data" placeholder="e.g 123" class="client-data" maxlength="3" oninput="validateCvc()">
+                <span class="msg-error"></span>
             </div> 
         </div>
     </div>
