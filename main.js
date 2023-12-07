@@ -30,6 +30,9 @@ function validateName() {
         msgErrorSpan[0].innerHTML = msgError;
         setError(0);
     }
+
+    const nameSpan = document.querySelector(".nome-client")
+    nameSpan.innerHTML = userName.value;
 }
 
 function validateCardNumber () {
@@ -46,6 +49,9 @@ function validateCardNumber () {
         msgErrorSpan[1].innerHTML = msgError;
         setError(1);
     }
+
+    const cardNumberSpan = document.querySelector(".numero-cartao");
+    cardNumberSpan.innerHTML = cardNumber.value;
 }
 
 function validateDate() {
@@ -62,6 +68,12 @@ function validateDate() {
         msgError = "";
         msgErrorSpan[2].innerHTML = msgError;
     }
+
+    const monthInput = document.querySelector("#month")
+    let dateSpan = document.querySelector(".exp-date");
+    dateSpan.innerHTML = monthInput.value;
+    const yearInput = document.querySelector("#year");
+    dateSpan.innerHTML += `/${yearInput.value}`
 }
 
 function validateCvc() {
@@ -78,6 +90,9 @@ function validateCvc() {
         msgError = "";
         msgErrorSpan[3].innerHTML = msgError;
     }
+
+    const cvcNumberSpan = document.querySelector(".cvc-number");
+    cvcNumberSpan.innerHTML = cvcNumber.value;
 }
 
 btnConfirm.addEventListener("click", confirm);
