@@ -52,11 +52,11 @@
     <div class="form-user">
         <div class="container-form">
             <label for="cardholder-name">Cardholder name</label>
-            <input type="text" id="cardholder-name" placeholder="e.g Jane Appleseed" class="client-data" oninput="validateName()">
+            <input type="text" id="cardholder-name" placeholder="e.g Jane Appleseed" class="client-data" oninput="validateName()" maxlength="30">
             <span class="msg-error"></span>
 
             <label for="card-number">Card number</label>
-            <input type="text" maxlength="12" id="card-number" placeholder="1234 5678 9123 0000" class="client-data" oninput="validateCardNumber()">
+            <input type="text" maxlength="16" id="card-number" placeholder="1234 5678 9123 0000" class="client-data" oninput="validateCardNumber()">
             <span class="msg-error"></span>
         
         <div class="exp-date-and-cvv">
@@ -77,6 +77,10 @@
             </div> 
         </div>
     </div>
+
+        <input type="button" value="Confirm" id="btn-confirm" class="form-btn">
+
+    </div> 
     <div class="container-success">
         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
             <circle cx="40" cy="40" r="40" fill="url(#paint0_linear_0_524)"/>
@@ -94,9 +98,8 @@
         </h1>
 
         <span>We've added your card details</span>
-    </div>
-    
-        <input type="button" value="Confirm" id="btn-confirm">
+
+        <input type="button" value="Continue" class="form-btn continue">
     </div>
 
     <script src="./main.js"></script>

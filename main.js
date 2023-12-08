@@ -95,13 +95,31 @@ function validateCvc() {
     cvcNumberSpan.innerHTML = cvcNumber.value;
 }
 
+function displayMsgSuccess() {
+    const formulario = document.querySelector(".form-user");
+    const successContainerMsg = document.querySelector(".container-success");
+
+    if(userName.value == 0 && cardNumber.value == 0 && cvcNumber.value == 0 && dataUser[2].value == 0) {
+        formulario.style.display = "flex";
+        successContainerMsg.style.display = "none";
+    } else {
+        formulario.style.display = "none" ;
+        successContainerMsg.style.display = "block";
+    }
+}
+
 btnConfirm.addEventListener("click", confirm);
 
-function confirm(){
+function confirm() {
     validateName();
     validateCardNumber();
     validateDate();
     validateCvc();
+    displayMsgSuccess();
+}
 
-    console.log("ok")
+const btnReload = document.querySelector(".continue").addEventListener("click", reloadPage);
+
+function reloadPage() {
+    location.reload();
 }

@@ -180,6 +180,10 @@ body {
     margin: auto;
     text-align: center;
     display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container-success-title {
@@ -189,12 +193,21 @@ body {
     padding-block: 2rem 1rem;
 }
 
-#btn-confirm {
+.form-btn {
     border-radius: 0.5rem;
-    background: var(--Deep-Violet, #21092F);
+    background: #21092F;
     color: var(--branco);
     padding: 1rem;
     margin-top: 1rem;
+}
+
+.form-btn:hover {
+    background: #52226e;
+}
+
+.continue {
+    width: 100%;
+    margin-top: 4rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -258,5 +271,11 @@ body {
 
     #cvc-data::placeholder {
         padding-left: 1rem;
+    }
+
+    .container-success {
+        top: 50%;
+        left: 65%;
+        transform: translate(-50%, -50%);
     }
 }
