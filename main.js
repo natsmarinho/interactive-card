@@ -36,7 +36,7 @@ function validateName() {
 }
 
 function validateCardNumber () {
-    if(/^[0-9]+$/.test(cardNumber.value)){
+    if(/[^0-9]/gi.test(cardNumber.value)){
         removeError(1);
         msgError = "";
         msgErrorSpan[1].innerHTML = msgError;
@@ -45,13 +45,29 @@ function validateCardNumber () {
         msgErrorSpan[1].innerHTML = msgError;
         setError(1);
     } else {
-        msgError = '<span class="msg-error">Wrong format, numbers only</span>';
+        msgError = '<span class="msg-error">Wrong format.</span>';
         msgErrorSpan[1].innerHTML = msgError;
         setError(1);
     }
 
     const cardNumberSpan = document.querySelector(".numero-cartao");
-    cardNumberSpan.innerHTML = cardNumber.value;
+    
+    cardNumber.addEventListener("input", function (e) {
+        const inputAlvo = e.target;
+        const regexCard = inputAlvo.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+        let formatado = "";
+
+        for (let i = 0; i < regexCard.length; i++){
+            if (i > 0 && i % 4 === 0) {
+                formatado += " ";
+            }
+
+            formatado += regexCard[i];
+        }
+
+        inputAlvo.value = formatado;
+        cardNumberSpan.innerHTML = inputAlvo.value;
+    })
 }
 
 function validateDate() {

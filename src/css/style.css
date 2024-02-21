@@ -240,13 +240,17 @@ body {
         height: 100vh;
     }
 
+    
     .frente {
         width: 75%;
+        height: 15%;
         left: 10rem;
+        padding-top: 4rem;
     }
 
     .verso {
         width: 85%;
+        height: 20%;
         top: 1rem;
         left: 15rem;
         padding-block: 2rem 2rem;
